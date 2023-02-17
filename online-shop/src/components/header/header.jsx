@@ -3,8 +3,6 @@ import Logo from "../image/logo.png";
 import Search from "../Search/Search";
 import { Cart } from "../Carrito/Carrito";
 
-//import {Search} from "../Search/Search.jsx";
-//import {Carrito} from "../Carrito/Carrito.jsx";
 
 export const Header = () => {
     return (
