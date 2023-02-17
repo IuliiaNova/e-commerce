@@ -6,6 +6,12 @@
     justify-content: space-around;
     padding: 0.3rem;
   }
+
+  .header {
+    background-image: url("../image/image-home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   
   .nav-item,
   .nav-logo {
@@ -21,3 +27,12 @@
   .nav-logo:hover {
     color: yellow;
   }
+
+  .div-nav-components-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+
+  }
+
+ 

@@ -8,13 +8,16 @@ export const Header = () => {
     return (
         <header className="header">
         <nav className="nav">
+            <div className="div-container-nav-links">
             <a href="/" className="nav-item">HOME</a>
             <a href="/" className="nav-item">ABOUT</a>
             <a href="/" className="nav-item">CARE</a>
+            </div>
             <img src={Logo} className="nav-logo" alt="logo"></img>
+            <div className="div-nav-components-icons">
             <Search />
-            <Cart />
-            
+            <Cart  />
+            </div>
         </nav>
         </header>
     )
