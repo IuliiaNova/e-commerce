@@ -1,15 +1,23 @@
-import "./productList.css";
+import "./products.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+
 
 export const ProductItem = ({ item }) => {
-  const { url, name, price } = item;
+
+  const { url, title, price, rating } = item;
+
   return (
     <div>
-      <img src={url} alt="" />
-      <div className="product-info-container">
-        <p>{name}</p>
-        <p>{price}</p>
+      <div className="div-image-product">
+      <img src={url} alt="image-product" className="product-item"/>
+      <FontAwesomeIcon icon={faHeart} className="product-item-like"/>
       </div>
-      <Button text="Buy me!" value={name} size="sm" color="secondary" />
+      <div className="product-info-container">
+        <p>{title}</p>
+        <p>{price}€</p>
+        <p>{rating}</p>
+      </div>
     </div>
   );
 };

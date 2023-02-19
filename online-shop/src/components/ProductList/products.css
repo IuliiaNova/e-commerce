@@ -1,0 +1,36 @@
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 4rem;
+  }
+  
+  .product-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+  }
+
+  .product-item {
+    width: 20rem;
+  }
+  
+.div-image-product {
+    position: relative;
+  }
+  
+.div-image-product,
+.product-item-like  {
+    padding-right: 30px;
+  }
+  
+.product-item-like {
+    position: absolute;
+    left: 17rem;
+    top: 10%;
+    transform: translateY(-50%);
+  }
