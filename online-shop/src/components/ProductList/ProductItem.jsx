@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { products } from "./products.css";
 import Counter from "../Counter/CounterButton"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 
-export const ProductItem = ({ id, url, title, price, count, handleChange, handleRemove, handleAddToCart }) => {
+export const ProductItem = ({ id, url, title, price, count, handleChange, handleRemove }) => {
 
   const [cartItems, setCartItems] = useState([]);
 
@@ -34,6 +33,7 @@ export const ProductItem = ({ id, url, title, price, count, handleChange, handle
     setCartItems([...cartItems, item]);
 }
 
+
   return (
     <div>
       <div className="div-image-product">
@@ -43,8 +43,8 @@ export const ProductItem = ({ id, url, title, price, count, handleChange, handle
       <div className="product-info-container">
         <p>{title}</p>
         <p>{price}€</p>
-        <Counter {...title} {...price} count={count} handleChange={handleChange} handleRemove={handleRemove} />
-        <button onClick={handleAddToCart}>Add to cart</button>
+        <Counter title={title} price={price} count={count} handleChange={handleChange} handleRemove={handleRemove} />
+        <button onClick={() => handleAddToCart({ id, title, price, count })}>Add to cart</button>
       </div>
     </div>
   );

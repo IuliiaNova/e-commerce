@@ -29,12 +29,10 @@ export const ProductsList = () => {
         title={product.title} 
         price={product.price} 
         count={product.count}
-        handleChange={handleChange}
-        handleRemove={handleRemove}
-        handleAddToCart={handleAddToCart}/>;
+        handleAddToCart={addToCart}/>;
       })}
     </div>
   );
 };
 
-export default ProductList;
+export default ProductsList;
