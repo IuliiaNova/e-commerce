@@ -7,11 +7,11 @@
     padding: 0.3rem;
   }
 
-  .header {
+  /*.header {
     background-image: url("../image/image-home.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-  }
+  }*/
   
   .nav-item,
   .nav-logo {
@@ -25,7 +25,7 @@
   
   .nav-item:hover,
   .nav-logo:hover {
-    color: yellow;
+    color: #95B46A;
   }
 
   .div-nav-components-icons {
@@ -33,6 +33,19 @@
     flex-direction: row;
     gap: 3rem;
 
+  }
+
+  .page-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px #3E5622;
+    color: #172815;
+
+  }
+
+  .div-container-nav-links {
+    display: flex;
+    gap: 1rem;
   }
 
  

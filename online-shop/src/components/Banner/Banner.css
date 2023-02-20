@@ -1,0 +1,43 @@
+.section-banner {
+    position: relative;
+    height: 50rem;
+}
+
+.p-banner {
+    position: relative;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    align-items: left;
+    display: block;
+    margin: 2rem;
+    
+}
+
+.h3-banner{
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    margin: 0;
+    text-align: left;
+}
+
+
+.button-banner{
+    position: relative;
+    margin: 2rem;
+    padding: 5px 10px;
+    font-family: 'Montserrat', sans-serif;  
+    border: 1px solid #53573F;
+    background-color: #53573F;
+    color: white;
+    border-radius: 20px;
+    display: block;
+    
+    }
+
+.text-content {
+  position: absolute;
+  bottom: 20rem;
+  left: 10rem;
+}

@@ -6,3 +6,4 @@ export * from './ProductList/ProductList';
 export * from './Search/Search';
 export * from './header/header';
 export * from './Counter/CounterButton';
+export * from './Banner/Banner';

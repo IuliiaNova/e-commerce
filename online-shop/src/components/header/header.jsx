@@ -14,7 +14,7 @@ export const Header = () => {
             <a href="/" className="nav-item">ABOUT</a>
             <a href="/" className="nav-item">CARE</a>
             </div>
-            <img src={Logo} className="nav-logo" alt="logo"></img>
+            <h1 className="page-name">SimpleCare</h1>
             <div className="div-nav-components-icons">
             <Search />
             <Cart  />

@@ -37,3 +37,9 @@
     transform: rotate(360deg);
   }
 }
+
+.back-image {
+  background-image: url("./components/image/image-home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

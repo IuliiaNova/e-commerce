@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { Header, ProductsList, ShoppingCart } from "./components";
+import { Header, ProductsList, ShoppingCart, Banner } from "./components";
 
 
 function loadItems() {
@@ -29,8 +29,11 @@ function App() {
 
   return (
     <div className="App">
+      <div className="back-image">
       <Header />
       <hr />
+      <Banner />
+      </div>
       <ProductsList />
       <ShoppingCart title={cartItems.title} price={cartItems.price} count={cartItems.count} />
 
