@@ -48,3 +48,5 @@ export const products = [
       id: 8,
     },
   ];
+
+  export default products;
