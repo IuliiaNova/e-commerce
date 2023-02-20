@@ -1,0 +1,11 @@
+.button-add {
+    padding: 5px 10px;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 0.7rem; 
+    border: 1px solid #53573F;
+    background-color: #53573F;
+    color: white;
+    border-radius: 20px;
+    
+}
+

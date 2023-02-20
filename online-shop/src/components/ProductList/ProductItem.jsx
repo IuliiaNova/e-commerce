@@ -34,7 +34,6 @@ export const ProductItem = ({ id, url, title, price, count, handleChange, handle
     setCartItems([...cartItems, item]);
 }
 
-
   return (
     <div>
       <div className="div-image-product">
@@ -44,8 +43,7 @@ export const ProductItem = ({ id, url, title, price, count, handleChange, handle
       <div className="product-info-container">
         <p>{title}</p>
         <p>{price}€</p>
-        <Counter title={title} price={price} count={count} handleChange={handleChange} handleRemove={handleRemove} />
-        <button onClick={() => handleAddToCart({ url, id, title, price, count })}>Add to cart</button>
+        <Counter id={id} url={url} title={title} price={price} count={count} handleChange={handleChange} handleRemove={handleRemove} handleAddToCart={handleAddToCart} />
       </div>
     </div>
   );
