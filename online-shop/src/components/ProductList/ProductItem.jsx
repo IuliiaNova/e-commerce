@@ -22,13 +22,14 @@ export const ProductItem = ({ id, url, title, price, count, handleChange, handle
 
 
 
-  const handleAddToCart = ({ id, title, price, count }) => {
+  const handleAddToCart = ({ id, url, title, price, count }) => {
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     const item = {
       id: id,
       title: title,
       price: price,
-      count: count,
+      count: {count},
+      url: url,
     };
     setCartItems([...cartItems, item]);
 }
@@ -44,7 +45,7 @@ export const ProductItem = ({ id, url, title, price, count, handleChange, handle
         <p>{title}</p>
         <p>{price}€</p>
         <Counter title={title} price={price} count={count} handleChange={handleChange} handleRemove={handleRemove} />
-        <button onClick={() => handleAddToCart({ id, title, price, count })}>Add to cart</button>
+        <button onClick={() => handleAddToCart({ url, id, title, price, count })}>Add to cart</button>
       </div>
     </div>
   );

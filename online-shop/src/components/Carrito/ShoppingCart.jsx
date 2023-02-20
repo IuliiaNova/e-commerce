@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./ShoppingCart.css";
+import ShoppingCartItem from "./ShoppingCartItem";
 
-
-
-export const ShoppingCart = ({title, price, count}) => {
+export const ShoppingCart = ({cartItems, handleRemove, handleChange}) => {
 
   return (
     <div className="container mx-auto mt-10">
@@ -18,23 +16,8 @@ export const ShoppingCart = ({title, price, count}) => {
             <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Price</h3>
             <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Total</h3>
           </div>
-          <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
-            <div className="flex w-2/5">
-              <div className="w-20">
-                <img className="h-24" src="" alt="" />
-              </div>
-              <div className="flex flex-col justify-between ml-4 flex-grow">
-                <span className="font-bold text-sm">{title}</span>
-                <a href="#" className="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
-              </div>
-            </div>
-            <div className="flex justify-center w-1/5">
-            Quantaty
-            </div>
-            <span className="text-center w-1/5 font-semibold text-sm">Product price</span>
-            <span className="text-center w-1/5 font-semibold text-sm">Quantaty*Price</span>
-          </div>
 
+       
 
 
           <a href="#" className="flex font-semibold text-indigo-600 text-sm mt-10">
@@ -46,7 +29,7 @@ export const ShoppingCart = ({title, price, count}) => {
         <div id="summary" className="w-1/4 px-8 py-10">
           <h1 className="font-semibold text-2xl border-b pb-8">Order Summary</h1>
           <div className="flex justify-between mt-10 mb-5">
-            <span className="font-semibold text-sm uppercase">{title}</span>
+            <span className="font-semibold text-sm uppercase">Product title</span>
             <span className="font-semibold text-sm">Product price</span>
           </div>
           <div>
