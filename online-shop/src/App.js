@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Header, ProductsList, ShoppingCart, Banner } from "./components";
+import { Footer } from "./components/Footer/Footer";
 
 
 function loadItems() {
@@ -44,6 +45,7 @@ function App() {
       <Banner />
       </div>
       <ProductsList />
+      <Footer />
 
     </div>
   );
