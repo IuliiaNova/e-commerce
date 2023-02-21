@@ -66,7 +66,7 @@ export const ShoppingCart = ({ handleRemove, handleChange }) => {
               <span className="text-gray-50">Total cost</span>
               <span className="text-gray-50">$$$</span>
             </div>
-            <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Buy</button>
+            <button className="bg-lime-900 rounded-lg font-semibold hover:bg-lime-600 py-3 text-sm text-white uppercase w-full">Buy</button>
           </div>
         </div>
 
