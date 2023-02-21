@@ -7,46 +7,37 @@ import "./CounterButton.css";
  /* const savedCartItems = localStorage.getItem('cartItems');
 if(cartItems.length >0){}*/
 
+/*useEffect(() => {
+      const savedCartItems = localStorage.getItem('cartItems');
+      if (savedCartItems) {
+        setCartItems(JSON.parse(savedCartItems));
+      }
+    }, []);*/
+
+
 
 export const Counter = ({ id, url, title, price }) => {
 
     const [count, setCount] = useState(0);
 
-
-    const handleIncrement = () => {
-        setCount(count + 1);
-    };
-
+    const handleIncrement = () => setCount(count + 1);
+    const handleRemove = () => setCount(0);
     const handleDecrement = () => {
         if (count > 0) {
-            setCount(count - 1);
-        }
-    };
-
+            setCount(count - 1);}};
     const handleChange = (event) => {
         setCount(parseInt(event.target.value));
     };
 
-    const handleRemove = () => {
-        setCount(0);
-    };
 
     const [cartItems, setCartItems] = useState([]);
 
     useEffect(() => {
-      const savedCartItems = localStorage.getItem('cartItems');
-      if (savedCartItems) {
-        setCartItems(JSON.parse(savedCartItems));
-      }
-    }, []);
-    
-    useEffect(() => {
       localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }, [cartItems]);
+
+
     
-  
-  
-  
     const handleAddToCart = ({ id, url, title, price, count, ...rest }) => {
       const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
       const item = {
@@ -71,7 +62,6 @@ export const Counter = ({ id, url, title, price }) => {
                 <button onClick={() => handleAddToCart({ url, id, title, price, count })} className="button-add">Add to cart</button>
               </div>
             </div>
-
     );
 }
 

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ShoppingCartItem from "./ShoppingCartItem";
 
-export const ShoppingCart = ({ handleRemove, handleChange }) => {
+export const ShoppingCart = ({ price, count, handleRemove, handleChange }) => {
 
-  const [cartItems, setItems] = useState([]);
+const [cartItems, setItems] = useState([]);
 
   useEffect(() => {
     const localStorageData = localStorage.getItem('cartItems');
@@ -13,6 +13,27 @@ export const ShoppingCart = ({ handleRemove, handleChange }) => {
     }
   }, []);
 
+
+  function handleRemove(id) {
+    const items = cartItems.filter((item) => (item.id !== id));
+    setItems(items);
+
+
+    const cartItemsFromStorage = JSON.parse(localStorage.getItem('cartItems'));
+    const index = cartItemsFromStorage.findIndex((item) => item.id === id);
+  
+    if (index !== -1) {
+      cartItemsFromStorage.splice(index, 1);
+      localStorage.setItem('cartItems', JSON.stringify(cartItemsFromStorage));
+    }
+  }
+
+  let totalCost = 0;
+  cartItems.forEach((item) => {
+    totalCost += item.price * item.count;
+  });
+
+const totalCostForm = totalCost.toFixed(2);
 
 
   return (
@@ -62,9 +83,9 @@ export const ShoppingCart = ({ handleRemove, handleChange }) => {
             </select>
           </div>
           <div className="border-t mt-8">
-            <div className="flex font-semibold justify-between py-6 text-sm uppercase">
+            <div className="flex font-semibold justify-between py-6 text-sm uppercase flex flex-col">
               <span className="text-gray-50">Total cost</span>
-              <span className="text-gray-50">$$$</span>
+              <span className="text-gray-50">{totalCostForm}</span>
             </div>
             <button className="bg-lime-900 rounded-lg font-semibold hover:bg-lime-600 py-3 text-sm text-white uppercase w-full">Buy</button>
           </div>

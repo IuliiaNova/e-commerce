@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Counter from "../Counter/CounterButton"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -6,33 +6,6 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 export const ProductItem = ({ id, url, title, price, count, handleChange, handleRemove }) => {
 
-  const [cartItems, setCartItems] = useState([]);
-
-  useEffect(() => {
-    const savedCartItems = localStorage.getItem('cartItems');
-    if (savedCartItems) {
-      setCartItems(JSON.parse(savedCartItems));
-    }
-  }, []);
-  
-  useEffect(() => {
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  }, [cartItems]);
-  
-
-
-
-  const handleAddToCart = ({ id, url, title, price, count }) => {
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    const item = {
-      id: id,
-      title: title,
-      price: price,
-      count: {count},
-      url: url,
-    };
-    setCartItems([...cartItems, item]);
-}
 
   return (
     <div>
@@ -43,7 +16,7 @@ export const ProductItem = ({ id, url, title, price, count, handleChange, handle
       <div className="product-info-container">
         <p>{title}</p>
         <p>{price}€</p>
-        <Counter id={id} url={url} title={title} price={price} count={count} handleChange={handleChange} handleRemove={handleRemove} handleAddToCart={handleAddToCart} />
+        <Counter id={id} url={url} title={title} price={price} count={count} handleChange={handleChange} handleRemove={handleRemove}  />
       </div>
     </div>
   );
