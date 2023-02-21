@@ -45,7 +45,7 @@ export const ShoppingCart = ({ handleRemove, handleChange }) => {
         ))
         ) : (
           <div className="col mb-4">
-            <h4>Your cart is empty</h4>
+            <h4>It is time to buy!</h4>
           </div>
         )}
     </div>
@@ -57,8 +57,8 @@ export const ShoppingCart = ({ handleRemove, handleChange }) => {
           <div>
             <label className="font-medium inline-block mb-3 text-sm uppercase">Shipping</label>
             <select className="block p-2 text-gray-600 w-full text-sm">
-              <option>Standard shipping - $5.00</option>
-              <option>Express shipping - $10.00</option>
+              <option value="5">Standard - $5.00</option>
+              <option value="10">Express - $10.00</option>
             </select>
           </div>
           <div className="border-t mt-8">

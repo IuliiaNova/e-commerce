@@ -6,6 +6,17 @@
     background-color: #53573F;
     color: white;
     border-radius: 20px;
+    margin-left: 20px;
     
 }
+
+.button-add:hover {
+    background-color: #6f764b;
+}
+
+.trash {
+    margin-right: 20px;
+}
+
+
 
