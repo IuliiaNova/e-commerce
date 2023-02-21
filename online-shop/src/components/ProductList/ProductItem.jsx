@@ -37,7 +37,7 @@ export const ProductItem = ({ id, url, title, price, count, handleChange, handle
   return (
     <div>
       <div className="div-image-product">
-      <img src={url} alt="image-product" className="product-item"/>
+      <img src={url} alt="product" className="product-item"/>
       <FontAwesomeIcon icon={faHeart} className="product-item-like"/>
       </div>
       <div className="product-info-container">

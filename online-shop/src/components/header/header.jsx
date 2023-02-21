@@ -1,6 +1,5 @@
 import React from 'react';
 import "./header.css";
-import Logo from "../image/flower.png";
 import Search from "../Search/Search";
 import { Cart } from "../Carrito/Carrito";
 

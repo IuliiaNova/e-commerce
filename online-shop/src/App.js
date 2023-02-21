@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { Header, ProductsList, ShoppingCart, Banner } from "./components";
+import { Header, ProductsList,  Banner } from "./components";
 import { Footer } from "./components/Footer/Footer";
 
 
