@@ -1,14 +1,26 @@
 import React, { useState, useEffect } from "react";
 import ShoppingCartItem from "./ShoppingCartItem";
 
-export const ShoppingCart = ({cartItems, handleRemove, handleChange}) => {
+export const ShoppingCart = ({ handleRemove, handleChange }) => {
+
+  const [cartItems, setItems] = useState([]);
+
+  useEffect(() => {
+    const localStorageData = localStorage.getItem('cartItems');
+    if (localStorageData) {
+      const parsedData = JSON.parse(localStorageData);
+      setItems(parsedData);
+    }
+  }, []);
+
+
 
   return (
     <div className="container mx-auto mt-10">
       <div className="flex shadow-md my-10">
         <div className="w-3/4 bg-white px-10 py-10">
           <div className="flex justify-between border-b pb-8">
-            <h1 className="font-semibold text-2xl">Shopping Cart</h1>
+            <h1 className="font-semibold  text-olive">Shopping Cart</h1>
           </div>
           <div className="flex mt-10 mb-5">
             <h3 className="font-semibold text-gray-600 text-xs uppercase w-2/5">Product Details</h3>
@@ -17,21 +29,31 @@ export const ShoppingCart = ({cartItems, handleRemove, handleChange}) => {
             <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Total</h3>
           </div>
 
-       
-
-
-          <a href="#" className="flex font-semibold text-indigo-600 text-sm mt-10">
-            <svg className="fill-current mr-2 text-indigo-600 w-4" viewBox="0 0 448 512"><path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" /></svg>
-            Continue Shopping
-          </a>
+          <div className="shopping-items">
+      {cartItems.length > 0 ? (     
+        cartItems.map((item) => (
+        <ShoppingCartItem
+          key={item.id}
+          url={item.url}
+          title={item.title}
+          price={item.price}
+          count={item.count}
+          quantity={item.quantity}
+          handleRemove={() => handleRemove(item.id)}
+          handleChange={(event) => handleChange(event, item.id)}
+        />
+        ))
+        ) : (
+          <div className="col mb-4">
+            <h4>Your cart is empty</h4>
+          </div>
+        )}
+    </div>
         </div>
 
         <div id="summary" className="w-1/4 px-8 py-10">
-          <h1 className="font-semibold text-2xl border-b pb-8">Order Summary</h1>
-          <div className="flex justify-between mt-10 mb-5">
-            <span className="font-semibold text-sm uppercase">Product title</span>
-            <span className="font-semibold text-sm">Product price</span>
-          </div>
+          <h1 className="font-semibold  border-b pb-8">Order Summary</h1>
+        
           <div>
             <label className="font-medium inline-block mb-3 text-sm uppercase">Shipping</label>
             <select className="block p-2 text-gray-600 w-full text-sm">
@@ -41,15 +63,16 @@ export const ShoppingCart = ({cartItems, handleRemove, handleChange}) => {
           </div>
           <div className="border-t mt-8">
             <div className="flex font-semibold justify-between py-6 text-sm uppercase">
-              <span>Total cost</span>
-              <span>Product price + shipping</span>
+              <span className="text-gray-50">Total cost</span>
+              <span className="text-gray-50">$$$</span>
             </div>
             <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Buy</button>
           </div>
         </div>
 
       </div>
-    </div>)
+    </div>
+    )
 }
 
 export default ShoppingCart;

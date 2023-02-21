@@ -24,6 +24,15 @@ function App() {
   useEffect(() => {
     localStorage.setItem("products", JSON.stringify(cartItems));
   }, [cartItems]);
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const localStorageData = localStorage.getItem('cartItems');
+    if (localStorageData) {
+      const parsedData = JSON.parse(localStorageData);
+      setItems(parsedData);
+    }
+  }, []);
 
 
 
@@ -35,7 +44,6 @@ function App() {
       <Banner />
       </div>
       <ProductsList />
-      <ShoppingCart title={cartItems.title} price={cartItems.price} count={cartItems.count} />
 
     </div>
   );
