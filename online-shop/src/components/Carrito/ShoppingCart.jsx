@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ShoppingCartItem from "./ShoppingCartItem";
 
-export const ShoppingCart = ({ price, count, handleRemove, handleChange }) => {
+export const ShoppingCart = ({ handleRemove, handleChange }) => {
 
 const [cartItems, setItems] = useState([]);
 
@@ -78,8 +78,8 @@ const totalCostForm = totalCost.toFixed(2);
           <div>
             <label className="font-medium inline-block mb-3 text-sm uppercase">Shipping</label>
             <select className="block p-2 text-gray-600 w-full text-sm">
-              <option value="5">Standard - $5.00</option>
-              <option value="10">Express - $10.00</option>
+              <option value={5}>Standard - $5.00</option>
+              <option value={10}>Express - $10.00</option>
             </select>
           </div>
           <div className="border-t mt-8">
