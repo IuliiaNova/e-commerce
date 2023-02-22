@@ -20,11 +20,11 @@ export const Counter = ({ id, url, title, price }) => {
 
     const [count, setCount] = useState(0);
 
-    const handleIncrement = () => setCount(count + 1);
+    const handleIncrement = () => setCount((prevState) => prevState + 1);
     const handleRemove = () => setCount(0);
     const handleDecrement = () => {
         if (count > 0) {
-            setCount(count - 1);}};
+            setCount((prevState) => prevState - 1);}};
     const handleChange = (event) => {
         setCount(parseInt(event.target.value));
     };
