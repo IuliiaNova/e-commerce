@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: space-around;
     padding: 0.3rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: acumin-pro, "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
   .nav-item,
@@ -20,7 +20,7 @@
   
   .nav-item:hover,
   .nav-logo:hover {
-    color: #95B46A;
+    color: #7a543f;
   }
 
 
@@ -35,6 +35,10 @@
   .div-container-nav-links {
     display: flex;
     gap: 1rem;
+  }
+
+  .logo {
+background-color: #e8bb87;
   }
 
  

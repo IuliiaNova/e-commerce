@@ -3,7 +3,6 @@ import "./header.css";
 import Search from "../Search/Search";
 import { Cart } from "../Carrito/Carrito";
 import { Link } from 'react-router-dom';
-import flower from "../image/flower.png"
 
 export const Header = () => {
   const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true);
@@ -14,21 +13,21 @@ export const Header = () => {
 
   return (
     <main className="header">
-      <nav className="nav backdrop-blur bg-gray-100 bg-opacity-50 shadow-lg">
+      <nav className="nav m-0 backdrop-blur bg-gray-100 bg-opacity-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between">
-            <div className="flex space-x-7">
-              <div>
-                <a href="#" className="flex items-center py-4 px-2">
-                  <img src={flower} alt="Logo" className="h-8 w-8 mr-2" />
-                </a>
+            <div className="flex justify-between">
+              <div className="nav-item logo p-4 m-0 hidden md:flex items-center">
+                <Link to="/" > SIMPLY NATURE</Link>
               </div>
-              <div className="div-container-nav-links hidden md:flex items-center space-x-1">
+              <div className="div-container-nav-links  hidden md:flex items-center ">
                 <Link to="/" className="nav-item"> HOME </Link>
                 <Link to="/shop" className="nav-item"> SHOP </Link>
                 <Link to="/about" className="nav-item"> ABOUT </Link>
-                <Search />
-                <Cart />
+                <div className="div-container-nav-links  hidden md:flex items-center ">
+                  <Search />
+                  <Cart />
+                </div>
               </div>
             </div>
 
@@ -46,14 +45,14 @@ export const Header = () => {
         {isMobileMenuHidden ? null : (
           <div className="mobile-menu">
             <ul className="">
-            <Link to="/" className="nav-item"> HOME </Link>
-                <Link to="/shop" className="nav-item"> SHOP </Link>
-                <Link to="/about" className="nav-item"> ABOUT </Link>
+              <Link to="/" className="nav-item"> HOME </Link>
+              <Link to="/shop" className="nav-item"> SHOP </Link>
+              <Link to="/about" className="nav-item"> ABOUT </Link>
             </ul>
-            </div>
-            )}
-            </nav>
-            </main>
+          </div>
+        )}
+      </nav>
+    </main>
 
-        )
-    }
+  )
+}
