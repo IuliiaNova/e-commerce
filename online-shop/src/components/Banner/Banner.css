@@ -1,12 +1,13 @@
 .section-banner {
     position: relative;
     height: 50rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .p-banner {
     position: relative;
     font-style: italic;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
     align-items: left;
     display: block;
