@@ -15,10 +15,9 @@
   }
 
   .search-input {
-    border: 1px solid  #73706c; 
-    border-radius: 20px;
+    border: 1px solid  #fcf2e6; 
     height: 1.5rem;
-    background-color: white;
+    background-color: #fcf2e6;
   }
 
   .icon{

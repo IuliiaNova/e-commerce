@@ -10,11 +10,8 @@ export const Home = () => {
 
     return (
         <div>
-            <div className="back-image">
             <Header />
             <Banner />
-            
-            </div>
             <Footer />
         </div>
     )

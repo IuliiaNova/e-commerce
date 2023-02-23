@@ -1,44 +1,27 @@
 .nav,
 .header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+   
     padding: 0.3rem;
-    font-family: acumin-pro, "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .nav-item,
   .nav-logo {
-    text-decoration: none;
     color: grey;
   }
 
-  .nav-logo{
-    width: 3rem
-  }
   
   .nav-item:hover,
   .nav-logo:hover {
-    color: #7a543f;
+    text-shadow: 2px 2px 2px #FAE6CE;
   }
 
-
-  .page-name {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    text-shadow: 2px 2px 2px #3E5622;
-    color: #172815;
-
-  }
 
   .div-container-nav-links {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .logo {
-background-color: #e8bb87;
+background-color: #FAE6CE;
   }
-
- 
