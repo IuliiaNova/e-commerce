@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import { Header, ProductsList,  Banner } from "./components";
-import { Footer } from "./components/Footer/Footer";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Home from './routes/Home';
+import Shop from './routes/Shop';
 
 
 
@@ -9,13 +10,15 @@ function App() {
 
   return (
     <div className="App">
-      <div className="back-image">
-      <Header />
-      <hr />
-      <Banner />
-      </div>
-      <ProductsList />
-      <Footer />
+      <BrowserRouter >
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/shop" element={<Shop />}/>
+          <Route path="/productpage" element={<div>ProductPage</div>}/>
+          <Route path="/about" element={<div>About</div>}/>
+          <Route path="/*" element={<Navigate replace to="/" />}/>
+        </Routes>
+      </BrowserRouter>
 
     </div>
   );

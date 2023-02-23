@@ -2,16 +2,17 @@ import React from 'react';
 import "./header.css";
 import Search from "../Search/Search";
 import { Cart } from "../Carrito/Carrito";
+import { Link } from 'react-router-dom';
 
 
 export const Header = () => {
     return (
-        <header className="header">
+        <main className="header">
         <nav className="nav">
             <div className="div-container-nav-links">
-            <a href="/" className="nav-item">HOME</a>
-            <a href="/" className="nav-item">ABOUT</a>
-            <a href="/" className="nav-item">CARE</a>
+            <Link to="/" className="nav-item"> HOME </Link>
+            <Link to="/shop" className="nav-item"> SHOP </Link>
+            <Link to="/about" className="nav-item"> ABOUT </Link>
             </div>
             <h1 className="page-name">SimpleCare</h1>
             <div className="div-nav-components-icons">
@@ -19,6 +20,6 @@ export const Header = () => {
             <Cart  />
             </div>
         </nav>
-        </header>
+        </main>
     )
 }
