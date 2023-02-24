@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Header, Banner, Footer } from "../../components";
 import UserContext from "../../context/User/UserContext";
+import "./Home.css";
 
 export const Home = () => {
 
@@ -9,11 +10,14 @@ export const Home = () => {
 
 
     return (
-        <div>
+        <>
+            <div className="back-image">
             <Header />
             <Banner />
+            </div>
+            
             <Footer />
-        </div>
+        </>
     )
 }
 

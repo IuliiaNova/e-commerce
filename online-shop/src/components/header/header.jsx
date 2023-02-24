@@ -12,9 +12,9 @@ export const Header = () => {
   };
 
   return (
-    <nav className="header nav backdrop-blur bg-gray-100 bg-opacity-50">
+    <nav className="header nav backdrop-blur">
       <div className="flex flex-row gap-40">
-        <div className="nav-item logo p-8 m-0 hidden md:flex items-center h-22 w-60 ">
+        <div className="nav-item logo p-8 hidden md:flex items-center h-24 w-60 font-bold text-xl">
           <Link to="/" > SIMPLE CARE</Link>
         </div>
         <div className="div-container-nav-links  hidden md:flex items-center w-80 p-8">
@@ -25,6 +25,7 @@ export const Header = () => {
         <div className="div-container-nav-links text-base  hidden md:flex items-center">
           <Search />
           <Cart />
+          <p className="p-banner text-gray-900">“Love yourself first, and everything else falls in line...”</p>
         </div>
       </div>
 

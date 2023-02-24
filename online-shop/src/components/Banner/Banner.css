@@ -1,26 +1,36 @@
 .section-banner {
-    position: relative;
-    height: 50rem;
+    height: 70vh; 
+    position:relative;
     font-family: 'Montserrat', sans-serif;
+    z-index: 1; 
+    background-image: url("../image/girl.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 .p-banner {
-    position: relative;
-    font-style: italic;
     font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
-    align-items: left;
-    display: block;
-    margin: 2rem;
-    
+    margin: 2rem;  
 }
 
 .h3-banner{
     position: relative;
     font-family: 'Montserrat', sans-serif;
-    display: block;
-    margin: 0;
-    text-align: left;
+    text-align: left; 
+    text-shadow: 2px 2px 2px #e793c8; 
+}
+
+
+
+
+.section-div-text-big {
+    width: 5rem;
+    border-left: 2px solid black;
+    height: 30rem;
+    margin-top: 2rem;
+    
 }
 
 
@@ -29,16 +39,29 @@
     margin: 2rem;
     padding: 5px 10px;
     font-family: 'Montserrat', sans-serif;  
-    border: 1px solid #53573F;
-    background-color: #53573F;
-    color: white;
+    color: rgb(84, 79, 79);
     border-radius: 20px;
-    display: block;
-    
     }
 
 .text-content {
   position: absolute;
-  bottom: 20rem;
   left: 10rem;
 }
+
+.section-decor-big{
+background-color: #FAE6CE;
+margin-left: 19rem;
+width: 23rem;
+height: 14rem;
+z-index: 1;
+}
+
+.section-decor-small {
+    background-color: #DCCBC1;
+    width: 15rem;
+    margin-top: 7rem;
+    margin-left: 4rem;
+    height: 5rem;
+    
+}
+
