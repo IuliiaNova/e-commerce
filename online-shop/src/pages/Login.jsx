@@ -11,6 +11,10 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(inputRef.current.value);
+
+        if(email === "iuliia@gmail.com" && password === '12345'){
+            return <p>Welcome, Iuliia</p>
+        }
     }
 
     const onChangeEmail = (e) => {
