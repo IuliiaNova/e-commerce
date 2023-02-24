@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Shop from "../pages/Shop/Shop";
 import Cart from "../pages/Cart/Cart";
+import Login from "../pages/Login";
 
 const RouterPaths = () => {
     return(
@@ -15,6 +16,7 @@ const RouterPaths = () => {
           <Route path="/about" element={<div>About</div>}/>
           <Route path="/cart" element={<Cart />}/>
           <Route path="/*" element={<Navigate replace to="/" />}/>
+          <Route path="/login" element={<Login />}/>
         </Routes>
       </BrowserRouter>
         </>
