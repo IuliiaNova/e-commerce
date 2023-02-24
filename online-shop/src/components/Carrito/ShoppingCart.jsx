@@ -68,9 +68,9 @@ const totalCostForm = totalCost.toFixed(2);
           <div className="col mb-4">
             <h4>It is time to buy!</h4>
           </div>
-        )}
+           )}  
     </div>
-        </div>
+       </div>
 
         <div id="summary" className="w-1/4 px-8 py-10">
           <h1 className="font-semibold  border-b pb-8">Order Summary</h1>
@@ -87,7 +87,7 @@ const totalCostForm = totalCost.toFixed(2);
               <span className="text-gray-50">Total cost</span>
               <span className="text-gray-50">{totalCostForm}</span>
             </div>
-            <button className="bg-lime-900 rounded-lg font-semibold hover:bg-lime-600 py-3 text-sm text-white uppercase w-full">Buy</button>
+            <button className="bg-pink-500  font-semibold hover:bg-rose-300 py-3 text-sm text-white uppercase w-full">Buy</button>
           </div>
         </div>
 

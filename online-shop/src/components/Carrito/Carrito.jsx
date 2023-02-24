@@ -1,11 +1,13 @@
 import "./Carrito.css";
 import React, { useState } from 'react';
-import ShoppingCart from './ShoppingCart';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 export const Cart = () => {
-  const [isCartOpen, setIsCartOpen] = useState(false);
+ /* 
+ import ShoppingCart from './ShoppingCart';
+ const [isCartOpen, setIsCartOpen] = useState(false);
 
   function openCart() {
     setIsCartOpen(true);
@@ -15,16 +17,17 @@ export const Cart = () => {
     setIsCartOpen(false);
   }
 
-  return (
-    <div>
-      <button className="cart-icon" onClick={openCart}><FontAwesomeIcon icon={faBagShopping} /></button>
-
-      {isCartOpen && (
+<button c onClick={openCart}></button>{isCartOpen && (
         <div className="cart-popup">
           <ShoppingCart />
           <button onClick={closeCart}>Close</button>
         </div>
-      )}
+      )}*/
+  
+  return (
+    <div>
+      <Link to="/cart"><FontAwesomeIcon icon={faBagShopping} className="cart-icon"/></Link>
+  
     </div>
   )
 

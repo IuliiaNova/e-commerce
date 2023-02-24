@@ -11,7 +11,7 @@ export const ProductItem = ({ id, url, title, price, count, handleChange, handle
     <div>
       <div className="div-image-product">
       <img src={url} alt="product" className="product-item"/>
-      <FontAwesomeIcon icon={faHeart} className="product-item-like"/>
+      <FontAwesomeIcon icon={faHeart} className="product-item-like hover:text-rose-700"/>
       </div>
       <div className="product-info-container">
         <p>{title}</p>

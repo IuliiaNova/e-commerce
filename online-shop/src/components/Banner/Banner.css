@@ -43,6 +43,10 @@
     border-radius: 20px;
     }
 
+.button-banner:hover{
+    font-weight: bold;
+}  
+
 .text-content {
   position: absolute;
   left: 10rem;
@@ -54,12 +58,13 @@ margin-left: 19rem;
 width: 23rem;
 height: 14rem;
 z-index: 1;
+opacity: 70%;
 }
 
 .section-decor-small {
     background-color: #DCCBC1;
     width: 15rem;
-    margin-top: 7rem;
+    margin-top: 3rem;
     margin-left: 4rem;
     height: 5rem;
     

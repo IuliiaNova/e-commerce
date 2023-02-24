@@ -25,7 +25,7 @@ export const Header = () => {
         <div className="div-container-nav-links text-base  hidden md:flex items-center">
           <Search />
           <Cart />
-          <p className="p-banner text-gray-900">“Love yourself first, and everything else falls in line...”</p>
+          
         </div>
       </div>
 

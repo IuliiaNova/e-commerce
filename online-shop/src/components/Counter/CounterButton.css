@@ -2,16 +2,15 @@
     padding: 5px 10px;
     font-family: 'Montserrat', sans-serif; 
     font-size: 0.7rem; 
-    border: 1px solid #53573F;
-    background-color: #53573F;
-    color: white;
-    border-radius: 20px;
-    margin-left: 20px;
+    border: 1px solid #9f8c80;
+    color: #9f8c80;
+    border-top-right-radius: 8px;
+    margin-left: 50px;
     
 }
 
 .button-add:hover {
-    background-color: #6f764b;
+    text-shadow: 1px 1px #e793c8;
 }
 
 .trash {
