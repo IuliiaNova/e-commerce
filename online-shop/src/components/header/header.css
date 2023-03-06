@@ -5,8 +5,7 @@
   background-color: #E2D4CB;
 }
 
-.nav-item,
-.nav-logo {
+.nav-item {
   color: grey;
 }
 
@@ -23,7 +22,8 @@
 }
 
 .logo {
-  background-color: #DCCBC1;
+  font-family: 'Montserrat', sans-serif,  'Rubik Iso', cursive, 'Shantell Sans', cursive;
+
 }
 
 .p-banner {
@@ -36,11 +36,5 @@
   background-size: 400% auto;
   color: transparent;
   background-clip: text;
-  animation: shine 2s ease-in-out infinite;
 }
 
-@keyframes shine {
-  to {
-    background-position: -200% center;
-  }
-}

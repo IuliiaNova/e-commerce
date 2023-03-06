@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import UserProvider from './context/User/UserProvider';
 import RouterPaths from './routes/Router';
 
