@@ -34,9 +34,28 @@ const CartProvider = ({ children }) => {
       };
 
 
+      const [wishlist, setWishlist] = useState([]);
+
+      useEffect(() => {
+        const storedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+          setWishlist(storedWishlist);
+      }, []);
+    
+      useEffect(() => {
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+      }, [wishlist]);
+    
+    
+      const addToWishlist = (id, url, title, price) => {
+        const wishItems = JSON.parse(localStorage.getItem('wishlist')) || [];
+        const item = { id, url, title, price };
+        setWishlist([...wishItems, item ]);
+      };
+
+
     return (
         <>
-            <CartContext.Provider value={{ cartItems, setItems, handleAddToCart }}>
+            <CartContext.Provider value={{ cartItems, setItems, handleAddToCart, addToWishlist, wishlist, setWishlist}}>
                 {children}
             </CartContext.Provider>
         </>

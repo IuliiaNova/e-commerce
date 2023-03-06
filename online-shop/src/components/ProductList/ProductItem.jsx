@@ -7,13 +7,14 @@ import CartContext from '../../context/Cart/CartContext';
 
 export const ProductItem = ({id, url, title, price, count, handleChange, handleRemove }) => {
 
-  const {handleAddToCart} = useContext(CartContext);
+  const {handleAddToCart, addToWishlist} = useContext(CartContext);
+
 
   return (
     <div>
       <div id={id} className="div-image-product">
       <img src={url} alt="product" className="product-item"/>
-      <FontAwesomeIcon icon={faHeart} className="product-item-like hover:text-rose-700"/>
+      <FontAwesomeIcon icon={faHeart} className="product-item-like hover:text-rose-700" onClick={() => addToWishlist(id, url, title, price )}/>
       </div>
       <div className="product-info-container">
         <p>{title}</p>
