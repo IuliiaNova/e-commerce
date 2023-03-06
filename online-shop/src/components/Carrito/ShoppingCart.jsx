@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import ShoppingCartItem from "./ShoppingCartItem";
 import CartContext from "../../context/Cart/CartContext";
+import { Link } from "react-router-dom";
 
 export const ShoppingCart = () => {
 
@@ -82,7 +83,7 @@ export const ShoppingCart = () => {
               <span className="font-semibold">Total cost</span>
               <span className="">{totalCostForm}€</span>
             </div>
-            <button className="bg-pink-500  font-semibold hover:bg-rose-300 py-3 text-sm text-white uppercase w-full">Buy</button>
+            <Link to="/login" className="nav-item"> <button className="bg-pink-500  font-semibold hover:bg-rose-300 py-3 text-sm text-white uppercase w-full">Buy</button> </Link>
           </div>
         </div>
 
