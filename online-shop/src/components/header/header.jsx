@@ -13,14 +13,14 @@ export const Header = () => {
 
   return (
     <nav className="header nav backdrop-blur">
-      <div className="flex flex-row gap-40">
+      <div className="flex flex-row gap-48">
         <div className="nav-item logo p-8 hidden md:flex items-center h-24 w-60 font-bold text-xl">
           <Link to="/" > SIMPLE CARE</Link>
         </div>
-        <div className="div-container-nav-links  hidden md:flex items-center w-80 p-8">
+        <div className="div-container-nav-links flex gap-14 hidden md:flex items-center w-80 p-8">
           <Link to="/" className="nav-item"> HOME </Link>
           <Link to="/shop" className="nav-item"> SHOP </Link>
-          <Link to='/wishlist' className="nav-item"> WISHLIST </Link>
+          <Link to='/wishlist' className="nav-item">MYLIST</Link>
           <Link to="/login" className="nav-item"> LOGIN </Link>
         </div>
         <div className="div-container-nav-links text-base  hidden md:flex items-center">

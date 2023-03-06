@@ -4,7 +4,6 @@ import "./products.css";
 import { products } from "../../data/products";
 
 
-
 export const ProductsList = () => {
 
   return (

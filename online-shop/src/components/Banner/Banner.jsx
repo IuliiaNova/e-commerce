@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Banner.css";
 import { flower } from "../image/grafic.png"; 
 
@@ -8,7 +9,8 @@ export const Banner = () => {
         <section className=" h-screen">
                     <div className="presentation">
                         <img src={flower} />
-                        <button className="button-banner">KNOW MORE</button>
+                        <Link to="/shop" className="nav-item"><button className="button-banner">KNOW MORE</button></Link>
+                        
                     </div>
         </section>
 

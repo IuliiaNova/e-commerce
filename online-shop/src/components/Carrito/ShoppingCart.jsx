@@ -1,40 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import ShoppingCartItem from "./ShoppingCartItem";
+import CartContext from "../../context/Cart/CartContext";
 
-export const ShoppingCart = ({ handleRemove, handleChange }) => {
+export const ShoppingCart = () => {
 
-const [cartItems, setItems] = useState([]);
-
-  useEffect(() => {
-    const localStorageData = localStorage.getItem('cartItems');
-    if (localStorageData) {
-      const parsedData = JSON.parse(localStorageData);
-      setItems(parsedData);
-    }
-  }, []);
-
+  const { cartItems, setItems, handleChange  } = useContext(CartContext);
 
   function handleRemove(id) {
     const items = cartItems.filter((item) => (item.id !== id));
     setItems(items);
-
-
-    const cartItemsFromStorage = JSON.parse(localStorage.getItem('cartItems'));
-    const index = cartItemsFromStorage.findIndex((item) => item.id === id);
-  
-    if (index !== -1) {
-      cartItemsFromStorage.splice(index, 1);
-      localStorage.setItem('cartItems', JSON.stringify(cartItemsFromStorage));
-    }
-  }
+  } 
 
   let totalCost = 0;
-  cartItems.forEach((item) => {
-    totalCost += item.price * item.count;
-  });
+const items = Array.isArray(cartItems) ? cartItems : [];
+items.forEach((item) => {
+  totalCost += item.price * item.count;
+});
 
 const totalCostForm = totalCost.toFixed(2);
-
 
   return (
     <div className="container mx-auto mt-10">
@@ -51,30 +34,31 @@ const totalCostForm = totalCost.toFixed(2);
           </div>
 
           <div className="shopping-items">
-      {cartItems.length > 0 ? (     
-        cartItems.map((item) => (
-        <ShoppingCartItem
-          key={item.id}
-          url={item.url}
-          title={item.title}
-          price={item.price}
-          count={item.count}
-          quantity={item.quantity}
-          handleRemove={() => handleRemove(item.id)}
-          handleChange={(event) => handleChange(event, item.id)}
-        />
-        ))
-        ) : (
-          <div className="col mb-4">
-            <h4>It is time to buy!</h4>
+            {cartItems.length > 0 ? (
+              cartItems.map((item) => (
+                <ShoppingCartItem
+                  key={item.id}
+                  id={item.id}
+                  url={item.url}
+                  title={item.title}
+                  price={item.price}
+                  count={item.count}
+                  quantity={item.quantity}
+                  handleRemove={() => handleRemove(item.id)}
+                  handleChange={(event) => handleChange(event, item.id)}
+                />
+              ))
+            ) : (
+              <div className="col mb-4">
+                <h4>It is time to buy!</h4>
+              </div>
+            )}
           </div>
-           )}  
-    </div>
-       </div>
+        </div>
 
         <div id="summary" className="w-1/4 px-8 py-10">
           <h1 className="font-semibold  border-b pb-8">Order Summary</h1>
-        
+
           <div>
             <label className="font-medium inline-block mb-3 text-sm uppercase">Shipping</label>
             <select className="block p-2 text-gray-600 w-full text-sm">
@@ -83,9 +67,9 @@ const totalCostForm = totalCost.toFixed(2);
             </select>
           </div>
           <div className="border-t mt-8">
-            <div className="flex font-semibold justify-between py-6 text-sm uppercase flex flex-col">
-              <span className="text-gray-50">Total cost</span>
-              <span className="text-gray-50">{totalCostForm}</span>
+            <div className="flex  justify-between py-6 text-sm uppercase flex flex-row text-gray-600">
+              <span className="font-semibold">Total cost</span>
+              <span className="">{totalCostForm}€</span>
             </div>
             <button className="bg-pink-500  font-semibold hover:bg-rose-300 py-3 text-sm text-white uppercase w-full">Buy</button>
           </div>
@@ -93,7 +77,7 @@ const totalCostForm = totalCost.toFixed(2);
 
       </div>
     </div>
-    )
+  )
 }
 
 export default ShoppingCart;
