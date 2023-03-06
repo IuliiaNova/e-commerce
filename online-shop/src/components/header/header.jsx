@@ -24,7 +24,6 @@ export const Header = () => {
           <Link to="/login" className="nav-item"> LOGIN </Link>
         </div>
         <div className="div-container-nav-links text-base  hidden md:flex items-center">
-          <Search />
           <Cart />
           
         </div>

@@ -9,7 +9,6 @@ export const ProductItem = ({id, url, title, price, count, handleChange, handleR
 
   const {handleAddToCart} = useContext(CartContext);
 
-
   return (
     <div>
       <div id={id} className="div-image-product">

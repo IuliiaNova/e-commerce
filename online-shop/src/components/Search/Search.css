@@ -1,4 +1,4 @@
-/*
+
 .input-with-icon {
     position: relative;
   }
@@ -16,9 +16,12 @@
 
   .search-input {
     border: 1px solid  #fcf2e6; 
+    border-radius: 20px;
     height: 1.5rem;
     background-color: #fcf2e6;
-  }*/
+    outline: none;
+    padding: 5px;
+  }
 
   .icon{
     color: grey;

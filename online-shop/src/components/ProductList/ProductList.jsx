@@ -2,7 +2,6 @@ import React, {useState, useEffect, useMemo } from 'react';
 import { ProductItem } from "./ProductItem";
 import "./products.css";
 
-
 export const ProductsList = () => {
 
   const [products, setProducts] = useState([]);
@@ -37,8 +36,11 @@ export const ProductsList = () => {
   }, [products]);
 
   return (
+    <div className='mt-8'>
+     <p className='ml-40'>Have a good shoping</p> 
     <div className="products-list">
       {memoizedProducts}
+    </div>
     </div>
   );
 };
