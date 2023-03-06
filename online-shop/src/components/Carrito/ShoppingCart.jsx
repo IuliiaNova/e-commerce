@@ -1,23 +1,30 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import ShoppingCartItem from "./ShoppingCartItem";
 import CartContext from "../../context/Cart/CartContext";
 
 export const ShoppingCart = () => {
 
-  const { cartItems, setItems, handleChange  } = useContext(CartContext);
+  const { cartItems, setItems, handleChange } = useContext(CartContext);
+  const [shippingCost, setShippingCost] = useState(5);
+
 
   function handleRemove(id) {
     const items = cartItems.filter((item) => (item.id !== id));
     setItems(items);
-  } 
+  }
 
   let totalCost = 0;
-const items = Array.isArray(cartItems) ? cartItems : [];
-items.forEach((item) => {
-  totalCost += item.price * item.count;
-});
+  const items = Array.isArray(cartItems) ? cartItems : [];
+  items.forEach((item) => {
+    totalCost += item.price * item.count;
+  });
 
-const totalCostForm = totalCost.toFixed(2);
+  const totalCostForm = (totalCost + shippingCost).toFixed(2);
+
+  function handleShippingChange(event) {
+    const shippingCost = parseInt(event.target.value);
+    setShippingCost(shippingCost);
+  }
 
   return (
     <div className="container mx-auto mt-10">
@@ -61,7 +68,11 @@ const totalCostForm = totalCost.toFixed(2);
 
           <div>
             <label className="font-medium inline-block mb-3 text-sm uppercase">Shipping</label>
-            <select className="block p-2 text-gray-600 w-full text-sm">
+            <select 
+            className="block p-2 text-gray-600 w-full text-sm"
+            value={shippingCost}
+            onChange={handleShippingChange}
+            >
               <option value={5}>Standard - $5.00</option>
               <option value={10}>Express - $10.00</option>
             </select>
