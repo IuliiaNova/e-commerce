@@ -53,7 +53,7 @@ export const Search = () => {
     <div>
       <div className="input-with-icon m-8 ml-20">
         <form onSubmit={searchProducts}>
-          <input type="text" className="search-input" placeholder="Search" value={searchItem} onChange={e => setSearchItem(e.target.value)} />
+          <input type="search" className="search-input" placeholder="Search" value={searchItem} onChange={e => setSearchItem(e.target.value)} />
           <span className="icon"><FontAwesomeIcon icon={faMagnifyingGlass} /></span>
         </form>
       </div>

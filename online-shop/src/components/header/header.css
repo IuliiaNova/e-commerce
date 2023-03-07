@@ -16,11 +16,6 @@
 }
 
 
-.div-container-nav-links {
-  display: flex;
-  gap: 2rem;
-}
-
 .logo {
   font-family: 'Montserrat', sans-serif,  'Rubik Iso', cursive, 'Shantell Sans', cursive;
 

@@ -36,9 +36,9 @@ export const Bestseller = () => {
       }, [products]);
 
   return (
-    <div className='mt-8'>
-     <p className='ml-40'>Our best sellers</p> 
-    <div className="products-list-best flex flex-row">
+    <div className='m-8  flex flex-col justify-center'>
+     <p className="text-3xl  w-full bg-rose-50 p-6 text-center">OUR BEST SELLERS</p> 
+    <div className="products-list-best flex flex-row justify-between p-12">
       {memoizedProducts}
     </div>
     </div>

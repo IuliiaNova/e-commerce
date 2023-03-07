@@ -9,12 +9,11 @@ import whth from "../image/press/whth.png";
 
 const Section = () => {
     return (
-        <div className="section-press">
-            <h2>SIMPLE CARE IN PRESS</h2>
-            <div className="carusel-press m-4 p-4 flex flex-row h-28 w-fuul justify-center justify-between">
+        <div className="section-press m-8">
+            <h2 className="text-3xl w-full bg-rose-50 p-6 text-center">SIMPLE CARE IN PRESS</h2>
+            <div className="carusel-press m-4 p-4 flex flex-row h-28 justify-center justify-between">
                 <img src={elle} alt="elle" />
                 <img src={mcl} alt="marie-cleare" />
-                <img src={nhth} alt="nature-health" />
                 <img src={tatler} alt="tatler" />
                 <img src={vogue} alt="vogue" />
                 <img src={whth} alt="women-health" />
