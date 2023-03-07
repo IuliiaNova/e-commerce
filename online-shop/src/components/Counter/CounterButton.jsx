@@ -1,4 +1,7 @@
-/*import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+/*
+With useState
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
 import "./CounterButton.css";
@@ -34,6 +37,8 @@ export const Counter = ({ id, url, title, price, handleAddToCart }) => {
 }
 
 export default Counter;*/
+
+// With useReducer
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';

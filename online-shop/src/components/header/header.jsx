@@ -12,7 +12,7 @@ export const Header = () => {
   };
 
   return (
-    <nav className="header nav backdrop-blur">
+    <nav className="header nav backdrop-blur w-full ">
       <div className="flex flex-row gap-48">
         <div className="nav-item logo p-8 hidden md:flex items-center h-24 w-60 font-bold text-xl">
           <Link to="/" > SIMPLE CARE</Link>
@@ -25,7 +25,6 @@ export const Header = () => {
         </div>
         <div className="div-container-nav-links text-base  hidden md:flex items-center">
           <Cart />
-          
         </div>
       </div>
 

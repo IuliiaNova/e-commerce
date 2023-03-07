@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { Header, Banner, Footer } from "../../components";
 import UserContext from "../../context/User/UserContext";
 import "./Home.css";
+import Section from "../../components/Section/Section";
+import { Bestseller } from "../../components/SectionBest/SectionBest/Bestseller";
 
 export const Home = () => {
 
@@ -15,6 +17,8 @@ export const Home = () => {
             <Header />
             <Banner />
             </div>
+            <Section />
+            <Bestseller />
             
             <Footer />
         </>

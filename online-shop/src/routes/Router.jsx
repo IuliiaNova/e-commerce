@@ -13,7 +13,7 @@ const RouterPaths = () => {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/shop" element={<Shop />}/>
-          <Route path="/productpage" element={<div>ProductPage</div>}/>
+          <Route path="/productpage/:idProduct" element={<div>ProductPage</div>}/>
           <Route path="/about" element={<div>About</div>}/>
           <Route path="/cart" element={<Cart />}/>
           <Route path="/*" element={<Navigate replace to="/" />}/>

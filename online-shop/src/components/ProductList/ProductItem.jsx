@@ -14,7 +14,7 @@ export const ProductItem = ({id, url, title, price, count, handleChange, handleR
     <div>
       <div id={id} className="div-image-product">
       <img src={url} alt="product" className="product-item"/>
-      <FontAwesomeIcon icon={faHeart} className="product-item-like hover:text-rose-700" onClick={() => addToWishlist(id, url, title, price )}/>
+      <FontAwesomeIcon icon={faHeart} className="product-item-like text-white border-2 border-white  pl-2 hover:text-rose-700" onClick={() => addToWishlist(id, url, title, price )}/>
       </div>
       <div className="product-info-container">
         <p>{title}</p>
