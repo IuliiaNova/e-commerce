@@ -2,9 +2,10 @@ import React, {useContext} from "react";
 import CartContext from "../../context/Cart/CartContext";
 import Wish from "./Wish";
 
+
 const WishList = ()=>{
 
-    const { wishlist, setWishlist } = useContext(CartContext);
+    const { wishlist, setWishlist, deleteFromWishlist } = useContext(CartContext);
 
     return (
         <div>
@@ -18,6 +19,7 @@ const WishList = ()=>{
               url={item.url}
               title={item.title}
               price={item.price}
+              deleteFromWishlist= {deleteFromWishlist}
             />
           ))
         ) : (

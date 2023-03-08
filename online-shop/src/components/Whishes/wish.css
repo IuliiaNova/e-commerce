@@ -1,0 +1,14 @@
+
+.div-wish {
+    position: relative;
+    width: 20rem;
+  }
+
+
+  .product-item-like {
+    position: absolute;
+    left: 17rem;
+    top: 10%;
+    transform: translateY(-50%);
+    padding-right: 30px;
+  }

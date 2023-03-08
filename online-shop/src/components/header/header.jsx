@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import "./header.css";
-import Search from "../Search/Search";
 import { Cart } from "../Carrito/Carrito";
 import { Link } from 'react-router-dom';
 

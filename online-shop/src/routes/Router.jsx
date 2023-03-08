@@ -5,6 +5,9 @@ import Shop from "../pages/Shop/Shop";
 import Cart from "../pages/Cart/Cart";
 import Login from "../pages/Login";
 import Wishlist from "../pages/Wishlist/Wishlist";
+import { ShowCart } from "../config/routes/paths";
+import { Log } from "../config/routes/paths";
+import { WishList } from "../config/routes/paths";
 
 const RouterPaths = () => {
     return(
@@ -15,10 +18,10 @@ const RouterPaths = () => {
           <Route path="/shop" element={<Shop />}/>
           <Route path="/productpage/:idProduct" element={<div>ProductPage</div>}/>
           <Route path="/about" element={<div>About</div>}/>
-          <Route path="/cart" element={<Cart />}/>
+          <Route path={ShowCart} element={<Cart />}/>
           <Route path="/*" element={<Navigate replace to="/" />}/>
-          <Route path="/login" element={<Login />}/>
-          <Route path="/wishlist" element={<Wishlist />}/>
+          <Route path={Log} element={<Login />}/>
+          <Route path={WishList} element={<Wishlist />}/>
         </Routes>
       </BrowserRouter>
         </>
