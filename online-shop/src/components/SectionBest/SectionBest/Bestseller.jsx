@@ -21,7 +21,7 @@ export const Bestseller = () => {
     }, []);
 
     const memoizedProducts = useMemo(() => {
-        const filteredProducts = products.filter(product => [1, 6, 4].includes(product.id));
+        const filteredProducts = products.filter(product => [1, 3,  6, 8].includes(product.id));
         return filteredProducts.map((product, idx) => (
           <ProductItem
             key={`beauty-item-${idx}`}
