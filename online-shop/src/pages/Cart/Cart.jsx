@@ -8,9 +8,6 @@ const Cart = () => {
             <ShoppingCart />
             <Footer />
         </div>
-
-
-
     )
 }
 

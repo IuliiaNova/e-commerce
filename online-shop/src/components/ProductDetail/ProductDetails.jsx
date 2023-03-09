@@ -8,8 +8,7 @@ import CartContext from '../../context/Cart/CartContext';
 
 const ProductDetails = () => {
 
-    const { count, handleAddToCart }= useContext(CartContext)
-
+    const { count, handleAddToCart, addToWishlist }= useContext(CartContext)
     const { idProduct: idProduct } = useParams();
 
     const {id, title, url, description, price} = products.find((product) => {
@@ -17,7 +16,6 @@ const ProductDetails = () => {
       }) 
 
   
-
     return (
         <section class="text-gray-700 body-font overflow-hidden bg-white">
             <div key={id} class="container px-5 py-24 mx-auto">
@@ -49,7 +47,7 @@ const ProductDetails = () => {
                         <p class="leading-relaxed">{description}</p>
                         <div class="flex flex-col gap-4">
                             <span class="title-font font-medium text-2xl text-gray-900">{price}</span>
-                            <button class="rounded-md w-32 h-10 bg-gray-200 p-2 border-0 inline-flex items-center justify-center text-gray-500 ml-4"> Add to wish list</button>
+                            <button class="rounded-md w-32 h-10 bg-gray-200 p-2 border-0 inline-flex items-center justify-center text-gray-500 ml-4" onClick={() => addToWishlist(id, url, title, price)}> Add to wish list</button>
                             <Counter id={id} url={url} title={title} price={price} count={count} handleAddToCart={handleAddToCart }/>
                         </div>
                     </div>

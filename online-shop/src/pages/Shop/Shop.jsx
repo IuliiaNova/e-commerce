@@ -9,9 +9,6 @@ const Shop = () => {
             <ProductsList />
             <Footer />
         </div>
-
-
-
     )
 }
 

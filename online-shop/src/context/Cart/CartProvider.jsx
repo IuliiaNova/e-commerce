@@ -39,7 +39,6 @@ const CartProvider = ({ children }) => {
         const item = { id, url, title, price, count };
         setItems([...cartItems, item]);
       }
-    
   };
 
 

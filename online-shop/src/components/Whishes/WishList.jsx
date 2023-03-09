@@ -5,7 +5,7 @@ import Wish from "./Wish";
 
 const WishList = ()=>{
 
-    const { wishlist, setWishlist, deleteFromWishlist } = useContext(CartContext);
+    const { wishlist, deleteFromWishlist } = useContext(CartContext);
 
     return (
         <div>

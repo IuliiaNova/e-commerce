@@ -26,7 +26,6 @@ export const Search = () => {
   }, []);
 
 
-
   const searchProducts = (e) => {
     e.preventDefault();
     const filteredItems = products.filter((item) => {

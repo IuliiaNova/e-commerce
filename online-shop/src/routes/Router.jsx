@@ -16,12 +16,8 @@ const RouterPaths = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
-
           <Route path="/productpage/:idProduct" element={<ProductDetail />} />
-
-
           <Route path={Log} element={<Login />} />
-
           <Route path="/*" element={
             <PrivateRoutes>
               <Routes>

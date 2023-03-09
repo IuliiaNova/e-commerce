@@ -1,7 +1,6 @@
 import React from "react";
 import elle from "../image/press/ell.png";
 import mcl from "../image/press/mcl.png";
-import nhth from "../image/press/nhth.png";
 import tatler from "../image/press/tatler.png";
 import vogue from "../image/press/vogue.png";
 import whth from "../image/press/whth.png";
@@ -17,9 +16,7 @@ const Section = () => {
                 <img src={tatler} alt="tatler" />
                 <img src={vogue} alt="vogue" />
                 <img src={whth} alt="women-health" />
-
             </div>
-
         </div>
 
     )
