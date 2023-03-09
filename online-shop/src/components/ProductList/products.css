@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    font-weight: 600;
+    font-weight: 600
   }
 
   .product-item {
@@ -23,14 +23,8 @@
     position: relative;
   }
   
-.div-image-product,
-.product-item-like  {
+.div-image-product  {
     padding-right: 30px;
   }
   
-.product-item-like {
-    position: absolute;
-    left: 17rem;
-    top: 10%;
-    transform: translateY(-50%);
-  }
+

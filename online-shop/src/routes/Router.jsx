@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Wishlist from "../pages/Wishlist/Wishlist";
 import { Log } from "../config/routes/paths";
 import PrivateRoutes from "./PrivatRouts";
+import ProductDetail from "../pages/ProductDetails/ProductDetail";
 
 const RouterPaths = () => {
   return (
@@ -15,7 +16,10 @@ const RouterPaths = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/productpage/:idProduct" element={<div>ProductPage</div>} />
+
+          <Route path="/productpage/:idProduct" element={<ProductDetail />} />
+
+
           <Route path={Log} element={<Login />} />
 
           <Route path="/*" element={
