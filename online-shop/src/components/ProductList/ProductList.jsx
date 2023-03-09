@@ -22,18 +22,24 @@ export const ProductsList = () => {
 
 // Here we prevent unnecessary re-renders of the ProductItem components if the products state hasn't changed
 
-  const memoizedProducts = useMemo(() => {
-    return products.map((product, idx) => {
-      return <ProductItem 
-      key={`beauty-item-${idx}`} 
-      item={product} 
-      id={product.id} 
-      url={product.url} 
-      title={product.title} 
-      price={product.price} 
-      count={product.count} />;
-    });
-  }, [products]);
+const memoizedProducts = useMemo(() => {
+  if (!Array.isArray(products)) {
+    return null;
+  }
+  return products.map((product, idx) => {
+    return (
+      <ProductItem 
+        key={`beauty-item-${idx}`} 
+        item={product} 
+        id={product.id} 
+        url={product.url} 
+        title={product.title} 
+        price={product.price} 
+        count={product.count} 
+      />
+    );
+  });
+}, [products]);
 
   return (
     <div className='mt-8'>

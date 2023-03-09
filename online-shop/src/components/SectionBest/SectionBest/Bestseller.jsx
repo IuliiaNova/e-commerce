@@ -1,46 +1,48 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import ProductItem from '../../ProductList/ProductItem';
 
-
 export const Bestseller = () => {
 
-    const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-      const fetchProducts = async () => {
-        try {
-          const response = await fetch('http://localhost:3000/products');
-          const data = await response.json();
-          setProducts(data);
-        } catch (error) {
-          console.error(error);
-        }
-      };
-  
-      fetchProducts();
-    }, []);
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/products');
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-    const memoizedProducts = useMemo(() => {
-        const filteredProducts = products.filter(product => [1, 3,  6, 8].includes(product.id));
-        return filteredProducts.map((product, idx) => (
-          <ProductItem
-            key={`beauty-item-${idx}`}
-            item={product}
-            id={product.id}
-            url={product.url}
-            title={product.title}
-            price={product.price}
-            count={product.count}
-          />
-        ));
-      }, [products]);
+    fetchProducts();
+  }, []);
+
+  const memoizedProducts = useMemo(() => {
+    if (!Array.isArray(products)) {
+      return [];
+    }
+    const filteredProducts = products.filter(product => [1, 3, 6, 8].includes(product.id));
+    return filteredProducts.map((product, idx) => (
+      <ProductItem
+        key={`beauty-item-${idx}`}
+        item={product}
+        id={product.id}
+        url={product.url}
+        title={product.title}
+        price={product.price}
+        count={product.count}
+      />
+    ));
+  }, [products]);
 
   return (
     <div className='m-8  flex flex-col justify-center'>
-     <p className="text-3xl  w-full bg-rose-50 p-6 text-center">OUR BEST SELLERS</p> 
-    <div className="products-list-best flex flex-row justify-between p-12">
-      {memoizedProducts}
-    </div>
+      <p className="text-3xl  w-full bg-rose-50 p-6 text-center">OUR BEST SELLERS</p>
+      <div className="products-list-best flex flex-row justify-between p-12">
+        {memoizedProducts}
+      </div>
     </div>
   )
 }
