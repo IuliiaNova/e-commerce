@@ -10,6 +10,8 @@ export const Header = () => {
     setIsMobileMenuHidden(!isMobileMenuHidden);
   };
 
+  const login = localStorage.getItem('userLogin');
+
   return (
     <nav className="header nav backdrop-blur w-full ">
       <div className="flex flex-row gap-96">
@@ -38,24 +40,16 @@ export const Header = () => {
         </div>
       )}
 
-
-
         <div className="div-container-nav-links flex gap-14 hidden md:flex items-center w-80 ml-72 p-8">
           
           <Link to="/" className="nav-item"> HOME </Link>
           <Link to="/shop" className="nav-item"> SHOP </Link>
           <Link to='/wishlist' className="nav-item">MYLIST</Link>
-          <Link to="/login" className="nav-item"> LOGIN </Link>
+          <Link to="/login" className="nav-item"> {login ? "LOG OUT" : "LOG IN"} </Link>
           <Cart />
         </div>
       
-      
       </div>
-
-
-   
     </nav>
-
-
   )
 }
