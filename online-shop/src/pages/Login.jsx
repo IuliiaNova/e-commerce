@@ -11,13 +11,13 @@ const Login = () => {
     inputRef.current.focus();
   }, [email]);
 
- /* useEffect(() => {
+ useEffect(() => {
     if (loggedIn) {
       localStorage.setItem('userLogin', JSON.stringify({ email, password, name: "Iuliia", loggedIn: true }));
     } else {
       localStorage.removeItem('userLogin');
     }
-  }, [loggedIn, email, password]);*/
+  }, [loggedIn, email, password]);
 
 
 

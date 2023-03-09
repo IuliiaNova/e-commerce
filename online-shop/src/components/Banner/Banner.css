@@ -30,7 +30,7 @@
 .presentation {
     background-color: var(--pinkseak);
     width: 100%;
-    height: 55vh;
+    height: 56vh;
     position: relative;
 }
 
@@ -41,9 +41,9 @@
     position: absolute;
     left: 250px;
     width: 100%;
-    height: 45vh;
+    height: 46vh;
     margin-left: 50%;
-    margin-top: 6.5rem;;
+    margin-top: 4.7rem;;
     
         
       
@@ -62,7 +62,7 @@
     left: 4rem;
     height: 70%;
     width: 55rem;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 600;
     color: transparent;
     letter-spacing: 7px;
