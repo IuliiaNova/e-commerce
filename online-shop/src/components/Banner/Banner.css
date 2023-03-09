@@ -26,6 +26,26 @@
     opacity: 0.7;
 }  
 
+.button-banner-two{
+    position: absolute;
+    margin: 2rem;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;  
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    top: 50%;
+    right: 55%;
+    background-color: var(--navy);
+    border: 1px solid var(--navy);
+    border-radius: 20px;
+    transition: opacity 100ms ease;
+    }
+
+.button-banner-two:hover{
+    font-weight: bold;
+    opacity: 0.7;
+}  
+
 
 .presentation {
     background-color: var(--pinkseak);
@@ -41,31 +61,71 @@
     position: absolute;
     left: 250px;
     width: 100%;
-    height: 46vh;
+    height: 50vh;
     margin-left: 50%;
-    margin-top: 4.7rem;;
-    
-        
-      
+    margin-top: 2.6rem;;
+       
 }
 
 .presentation::before {
-    content: "THE BEST OF NATURE BEAUTY";
+    content: "SIMPLY BEAUTIFUL. SIMPLY YOU. SIMPLE CARE.";
     -webkit-text-stroke: 2px white;
     border-left: 2px solid var(--navy);
     position: absolute;
     padding: 1rem;
     padding-left: 2rem;
-    
     margin-left: 100px;
     top: 50px;
     left: 4rem;
     height: 70%;
     width: 55rem;
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 600;
     color: transparent;
     letter-spacing: 7px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.presentation-two {
+    background-color: var(--pinkseak);
+    width: 100%;
+    height: 40.6vh;
+    position: relative;
+}
+
+
+.presentation-two::after {
+    content: "";
+    background-image: url('../image/banner-two.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 205px;
+    width: 50%;
+    height: 40vh;
+    margin-left: 50%;
+    margin-top: 0.3rem;
+
+    
+}
+
+.presentation-two::before {
+    content: "BEAUTY SHOULDN'T BE COMPLICATED. SIMPLE CARE.";
+    -webkit-text-stroke: 2px white;
+    border-left: 2px solid var(--navy);
+    position: absolute;
+    padding: 1rem;
+    padding-left: 2rem;
+    margin-left: 100px;
+    top: 50px;
+    left: 4rem;
+    height: 50%;
+    width: 55rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: transparent;
+    letter-spacing: 7px;
+    font-family: 'Courier New', Courier, monospace;
 
 }
 
