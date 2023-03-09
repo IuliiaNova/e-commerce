@@ -19,8 +19,6 @@ const Login = () => {
     }
   }, [loggedIn, email, password]);
 
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email === "iuliia@gmail.com" && password === '12345') {

@@ -18,8 +18,6 @@ export const Header = () => {
         <div className="nav-item logo p-8 hidden md:flex items-center h-24 w-60 font-bold text-xl">
           <Link to="/" > SIMPLE CARE</Link>
         </div>
-
-
            <div className="md:hidden flex items-center">
         <button className="outline-none mobile-menu-button" onClick={toggleMobileMenu}>
           <svg className=" w-6 h-6 text-gray-500 hover:text-green-500 "

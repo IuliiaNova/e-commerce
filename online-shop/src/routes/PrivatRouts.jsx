@@ -1,12 +1,11 @@
 import React, { useContext } from 'react';
 import { Navigate } from 'react-router-dom';
 
-
-const PrivateRoutes = ( { children }) => {
+const PrivateRoutes = ({ children }) => {
 
     const isLogged = localStorage.getItem('userLogin');
 
-  return isLogged ? children : <Navigate to="/login"/>
+    return isLogged ? children : <Navigate to="/login" />
 
 }
 

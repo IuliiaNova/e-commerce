@@ -34,6 +34,4 @@ const RouterPaths = () => {
   );
 };
 
-
-
 export default RouterPaths; 
