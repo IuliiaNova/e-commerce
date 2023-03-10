@@ -1,35 +1,42 @@
 .nav,
 .header {
-  padding: 0.3rem;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #E2D4CB;
+  padding: 0.8rem;
+  background-color: #D7E3D5;
+  font-size: 1.5rem;
+  border-bottom: 5px double #424632;
 }
 
 .nav-item {
-  color: grey;
+  color: #424632;
 }
-
 
 .nav-item:hover,
 .nav-logo:hover {
-  text-shadow: 2px 2px 2px #e793c8;
-}
-
-
-.logo {
-  font-family: 'Montserrat', sans-serif,  'Rubik Iso', cursive, 'Shantell Sans', cursive;
-
+  text-shadow: 2px 2px 1px #edeee9;
+  border-radius: 20px;
 }
 
 .p-banner {
   font-family: 'Dancing Script', cursive;
   font-size: 1.5rem;
   margin: 2rem;
-
   display: inline-block;
-  background: linear-gradient(to right, #e793c8, #d90c0c, #d257a5);
   background-size: 400% auto;
   color: transparent;
   background-clip: text;
+}
+
+.div-container-nav-links{
+font-weight: bolder;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #424632;
+  
+}
+
+.logo:hover {
+  border: none;
 }
 

@@ -8,9 +8,9 @@ const WishList = ()=>{
     const { wishlist, deleteFromWishlist } = useContext(CartContext);
 
     return (
-        <div>
-            <h2> Here your wish list</h2>
-        <div className="wishlist-items flex flex-row justify-center gap-10">
+        <div className="m-8">
+            <h2 className="text-2xl w-full p-6 text-center font-semibold"> Here your wish list</h2>
+        <div className="wishlist-items flex flex-row justify-center gap-10 m-8">
         {wishlist.length > 0 ? (
           wishlist.map((item) => (
             <Wish
@@ -24,7 +24,7 @@ const WishList = ()=>{
           ))
         ) : (
           <div className="col mb-4">
-            <h4>It is time to make a wish!</h4>
+            <h4 className="text-2xl w-full p-6 text-center">It is time to make a wish!</h4>
           </div>
         )}
       </div>

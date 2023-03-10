@@ -39,7 +39,7 @@ export const Bestseller = () => {
 
   return (
     <div className='m-8  flex flex-col justify-center'>
-      <p className="text-3xl  w-full bg-rose-50 p-6 text-center">OUR BEST SELLERS</p>
+      <h2 className="text-2xl w-full p-6 text-center font-semibold">OUR BEST SELLERS</h2>
       <div className="products-list-best flex flex-row justify-between p-12">
         {memoizedProducts}
       </div>

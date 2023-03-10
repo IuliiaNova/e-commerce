@@ -4,18 +4,19 @@ import mcl from "../image/press/mcl.png";
 import tatler from "../image/press/tatler.png";
 import vogue from "../image/press/vogue.png";
 import whth from "../image/press/whth.png";
+import "./section.css";
 
 
 const Section = () => {
     return (
-        <div className="section-press m-8">
-            <h2 className="text-3xl w-full bg-rose-50 p-6 text-center">SIMPLE CARE IN PRESS</h2>
-            <div className="carusel-press m-4 p-4 flex flex-row h-28 justify-center justify-between">
-                <img src={elle} alt="elle" />
-                <img src={mcl} alt="marie-cleare" />
-                <img src={tatler} alt="tatler" />
-                <img src={vogue} alt="vogue" />
-                <img src={whth} alt="women-health" />
+        <div className="m-8">
+            <h2 className="text-2xl w-full p-6 text-center font-semibold">SIMPLE CARE IN PRESS</h2>
+            <div className="carusel-press m-4 p-4 flex flex-row justify-center justify-between align-middle">
+                <img src={elle} alt="elle" className="h-28"/>
+                <img src={mcl} alt="marie-cleare" className="h-32"/>
+                <img src={tatler} alt="tatler" className="h-20 mt-4"/>
+                <img src={vogue} alt="vogue" className="h-20 mt-4"/>
+                <img src={whth} alt="women-health" className="h-32"/>
             </div>
         </div>
 

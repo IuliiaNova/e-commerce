@@ -15,7 +15,7 @@ export const Header = () => {
   return (
     <nav className="header nav backdrop-blur w-full ">
       <div className="flex flex-row gap-96">
-        <div className="nav-item logo p-8 hidden md:flex items-center h-24 w-60 font-bold text-xl">
+        <div className="nav-item logo p-8 hidden md:flex items-center h-24 w-68 font-bold">
           <Link to="/" > SIMPLE CARE</Link>
         </div>
            <div className="md:hidden flex items-center">
@@ -43,7 +43,7 @@ export const Header = () => {
           <Link to="/" className="nav-item"> HOME </Link>
           <Link to="/shop" className="nav-item"> SHOP </Link>
           <Link to='/wishlist' className="nav-item">MYLIST</Link>
-          <Link to="/login" className="nav-item"> {login ? "LOG OUT" : "LOG IN"} </Link>
+          <Link to="/login" className="nav-item"> {login ? "LOGOUT" : "LOGIN"} </Link>
           <Cart />
         </div>
       

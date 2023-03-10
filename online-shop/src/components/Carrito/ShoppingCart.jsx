@@ -58,7 +58,7 @@ export const ShoppingCart = () => {
               ))
             ) : (
               <div className="col mb-4">
-                <h4>It is time to buy!</h4>
+                <h4 className="text-green-900 font-bold text-xl">It is time to buy!</h4>
               </div>
             )}
           </div>
@@ -83,7 +83,7 @@ export const ShoppingCart = () => {
               <span className="font-semibold">Total cost</span>
               <span className="">{totalCostForm}€</span>
             </div>
-            <Link to="/login" className="nav-item"> <button className="bg-pink-500  font-semibold hover:bg-rose-300 py-3 text-sm text-white uppercase w-full">Buy</button> </Link>
+            <Link to="/login" className="nav-item"> <button className="bg-green-900 rounded-3xl font-semibold hover:bg-green-700 py-3 text-sm text-white uppercase w-full">Buy</button> </Link>
           </div>
         </div>
 

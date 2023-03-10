@@ -44,14 +44,14 @@ const Login = () => {
   return (
     <div>
       <Header />
-      {loggedIn ? <h2> Welcome, Iuliia </h2> : <h2>Welcome</h2>}
-      <div className="m-10">
-        <form onSubmit={(e) => handleSubmit(e)}>
-          <label htmlFor="email">Email</label>
-          <input type="email" value={email} name="email" ref={inputRef} onChange={(e) => onChangeEmail(e)} className="border-2" />
-          <label htmlFor="password">Password</label>
-          <input type="password" value={password} name="password" className="border-2" onChange={(e) => onChangePassword(e)} />
-          {loggedIn ? <button type="submit" className="border-2 bg-rose-500 m-4 p-2">Log Out</button> : <button type="submit" className="border-2 bg-rose-500 m-4 p-2">Log In</button>}
+      <div className="text-2xl p-6 text-center font-semibold w-full flex flex-col items-center  h-screen">
+      {loggedIn ? <h2 className="text-2xl bg-gray-50 p-6 w-full font-semibold m-4"> Welcome, Iuliia </h2> : <h2 className="text-2xl w-full bg-gray-50 p-6 font-semibold">Welcome</h2>}
+        <form onSubmit={(e) => handleSubmit(e)} className="flex flex-col w-1/4 mt-8">
+          <label htmlFor="email" className="mt-8">Email</label>
+          <input type="email" value={email} name="email" ref={inputRef} onChange={(e) => onChangeEmail(e)} className="border-2 rounded-lg mt-4 p-2 outline-none" />
+          <label htmlFor="password" className="mt-8">Password</label>
+          <input type="password" value={password} name="password" className="border-2 rounded-lg mt-4 p-2 outline-none" onChange={(e) => onChangePassword(e)} />
+          {loggedIn ? <button type="submit" className="border-2 rounded-3xl bg-red-300 mt-8 p-2">Log Out</button> : <button type="submit" className="border-2 rounded-3xl bg-lime-300 mt-8 p-2">Log In</button>}
         </form>
       </div>
       <Footer />
