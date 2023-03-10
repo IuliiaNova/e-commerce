@@ -57,7 +57,13 @@ const CartProvider = ({ children }) => {
   const addToWishlist = (id, url, title, price) => {
     const wishItems = JSON.parse(localStorage.getItem('wishlist')) || [];
     const item = { id, url, title, price };
-    setWishlist([...wishItems, item]);
+
+    const itemIndex = wishItems.findIndex((i) => i.id === id);
+    if (itemIndex === -1) {
+      setWishlist([...wishItems, item]);
+    } else {
+      alert("You already have this product in your wishlist");
+    }
   };
 
   const [wisheslist, removeFromWishlist ] = useState([]);
@@ -65,13 +71,9 @@ const CartProvider = ({ children }) => {
   const deleteFromWishlist = (id) => {
     const wishItems = JSON.parse(localStorage.getItem('wishlist')) || [];
     const index = wishItems.findIndex((wishItem) => wishItem.id === id);
-  
     if (index !== -1) {
-      // Item exists in wishlist, so remove it
       wishItems.splice(index, 1);
-      // Update the wishlist state with the new array
       setWishlist([...wishItems]);
-      // Save the updated wishlist in local storage
       localStorage.setItem('wishlist', JSON.stringify(wishItems));
     }
   };

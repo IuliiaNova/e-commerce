@@ -12,14 +12,14 @@ export const ProductItem = ({ id, url, title, price, count, handleChange, handle
 
   return (
     
-      <div>
+      <div className='flex flex-col gap-4'>
         <div id={id} className="div-image-product">
           <Link to={`/productpage/${id}`} >
           <img src={url} alt="product" className="product-item" />
           </Link>
           <FontAwesomeIcon icon={faHeart} className="product-item-like text-white border-2 border-white  pl-2 hover:text-rose-700" onClick={() => addToWishlist(id, url, title, price)} />
         </div>
-        <div className="product-info-container">
+        <div className="product-info-container flex flex-col gap-2">
           <p>{title}</p>
           <p>{price}€</p>
           <Counter id={id} url={url} title={title} price={price} count={count} handleChange={handleChange} handleRemove={handleRemove} handleAddToCart={handleAddToCart} children={<FontAwesomeIcon icon={faHeart} className="product-item-like text-white border-2 border-white  pl-2 hover:text-rose-700" onClick={() => addToWishlist(id, url, title, price)} />}/>

@@ -11,7 +11,7 @@ export const Wish = ({id, url, title, price, deleteFromWishlist }) => {
   const { count, handleAddToCart }= useContext(CartContext)
 
   return (
-    <div>
+    <div className='flex flex-col gap-4 items-center'>
       <div id={id} className="div-wish">
       <img src={url} alt="product" className="product-img-item"/>
       <FontAwesomeIcon 
@@ -19,7 +19,7 @@ export const Wish = ({id, url, title, price, deleteFromWishlist }) => {
       className="product-item-like hover:text-rose-700" 
       onClick={() => deleteFromWishlist(id)}/>
       </div>
-      <div className="product-info-container">
+      <div className="product-info-container flex flex-col gap-2">
         <p>{title}</p>
         <p>{price}€</p>
         <Counter id={id} url={url} title={title} price={price} count={count} handleAddToCart={handleAddToCart }/>

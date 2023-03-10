@@ -3,6 +3,7 @@ import CartContext from "../../context/Cart/CartContext";
 import Wish from "./Wish";
 
 
+
 const WishList = ()=>{
 
     const { wishlist, deleteFromWishlist } = useContext(CartContext);

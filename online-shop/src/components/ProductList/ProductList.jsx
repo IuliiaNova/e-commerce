@@ -42,8 +42,8 @@ const memoizedProducts = useMemo(() => {
 }, [products]);
 
   return (
-    <div className='mt-8'>
-     <p className='ml-40'>Have a good shoping</p> 
+    <div className='mt-8 flex flex-col items-center'>
+     <p className="text-2xl bg-lime-50 p-6 w-full font-semibold m-4 text-center">Have a good shoping</p> 
     <div className="products-list">
       {memoizedProducts}
     </div>

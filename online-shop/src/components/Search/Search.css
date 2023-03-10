@@ -15,10 +15,11 @@
   }
 
   .search-input {
-    border: 1px solid  #fcf2e6; 
+    border: 1px solid  #eff1ee; 
     border-radius: 20px;
-    height: 1.5rem;
-    background-color: #fcf2e6;
+    height: 2.5rem;
+    width: 25rem;
+    background-color: #eff1ee;
     outline: none;
     padding: 5px;
   }
@@ -26,3 +27,12 @@
   .icon{
     color: grey;
   }
+
+
+ .matched-products {
+  border: 2px solid #eff1ee;
+  background-color: #f9f9f9;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  
+ } 

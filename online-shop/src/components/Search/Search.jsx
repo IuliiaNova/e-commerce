@@ -57,7 +57,7 @@ export const Search = () => {
         </form>
       </div>
       {matchingItems.length > 0 &&
-      <div className="matched-products flex flex-row bg-rose-50 ml-16 p-8 w-2/4">
+      <div className="matched-products flex flex-row ml-16 p-8 w-5/6">
         {renderMatchingItems()}
       </div>
     }

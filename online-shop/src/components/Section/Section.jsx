@@ -9,7 +9,7 @@ import "./section.css";
 
 const Section = () => {
     return (
-        <div className="m-8">
+        <div className="m-8 ">
             <h2 className="text-2xl w-full p-6 text-center font-semibold">SIMPLE CARE IN PRESS</h2>
             <div className="carusel-press m-4 p-4 flex flex-row justify-center justify-between align-middle">
                 <img src={elle} alt="elle" className="h-28"/>

@@ -11,7 +11,6 @@ export const Cart = () => {
       <Link to="/cart"><FontAwesomeIcon icon={faBagShopping} className="cart-icon"/></Link>
     </div>
   )
-
 }
 
 export default Cart;
