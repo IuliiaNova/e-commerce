@@ -22,7 +22,7 @@ const ProductDetails = () => {
                 <div class="lg:w-4/5 mx-auto flex flex-wrap">
                     <img alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" src={url} />
                     <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                        <h2 class="text-sm title-font text-gray-500 tracking-widest">SIMPLE CARE</h2>
+                        <h2 class="text-sm title-font text-gray-500 tracking-widest p-4 bg-slate-50 mb-4">SIMPLE CARE</h2>
                         <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{title}</h1>
                         <div class="flex mb-4">
                             <span class="flex items-center">
@@ -44,10 +44,10 @@ const ProductDetails = () => {
                                 <span class="text-gray-600 ml-3">4 Reviews</span>
                             </span>
                         </div>
+                        <button class="rounded-br-lg w-36 h-8 bg-rose-50 p-2 inline-flex items-center justify-center text-gray-900 text-xs font-bold hover:bg-rose-200 mb-4" onClick={() => addToWishlist(id, url, title, price)}> ADD TO WISHLIST</button>
                         <p class="leading-relaxed">{description}</p>
-                        <div class="flex flex-col gap-4">
-                            <span class="title-font font-medium text-2xl text-gray-900">{price}</span>
-                            <button class="rounded-md w-32 h-10 bg-gray-200 p-2 border-0 inline-flex items-center justify-center text-gray-500 ml-4" onClick={() => addToWishlist(id, url, title, price)}> Add to wish list</button>
+                        <div class="flex flex-col gap-4 mt-4">
+                            <span class="title-font font-medium text-2xl text-gray-900">{price}€</span>
                             <Counter id={id} url={url} title={title} price={price} count={count} handleAddToCart={handleAddToCart }/>
                         </div>
                     </div>

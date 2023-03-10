@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Header, Banner, Footer } from "../../components";
 import "./Home.css";
 import Section from "../../components/Section/Section";
