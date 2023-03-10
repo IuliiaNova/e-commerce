@@ -1,70 +1,146 @@
-# Getting Started with Create React App
+# About the Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Hi everyone! This is a suggestion for the Assembler Institute of Technology. In this project, I've written a React app to run an online store without a database.
 
-In the project directory, you can run:
 
-### `npm start`
+My main tasks were:
+- Try to grasp the logic and visualization of components;
+- Understand how to use the react hooks: useState, useEffect, useRef, useMemo, useReduce, and useContext;
+- Understand how to use the react-router-dom hooks: useLocation, Navigate, BrowserRouter, Routes, and Route;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologies
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**For style:** CSS, Tailwind,
+**For data:** JSON-server, localHost
+**For developing:** JavaScript and React
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setting to start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **How to run the project:** Open a terminal -> npm start (! make sure that you are in the correct folder "online-shop")
+2. **How to run the json-server:** json-server --watch products.json
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ ! Remember that you need to open two different terminals and get two servers, one for web and another for data.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ ## Visualization
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+ **Main page**
+ ![Main page: header, banner, section with partners, best sellers, footer](./src/img/home.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  **Shop page**
+ ![Shop: Header, search, search section with matched item (you can see it just if you start searching), products](./src/img/shop.png)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  **Search section**
+ ![Search: Search component, Search section with matched item (you can see it just if you start searching)](./src/img/search.png)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ **Wish page**
+ ![Wishlist](./src/img/wish.png)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+ **Log page**
+ ![Log In / Log out](./src/img/log.png)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ **Cart page**
+ ![Shop cart](./src/img/cart.png)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+ **Product page**
+ ![Product details page](./src/img/item.png)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Functionality
+
+
+So, what can we do on this web?
+
+
+ **Main page**
+
+
+ - If you click on the "Know more" button --> you will be redirected to the shop page.
+
+
+ - In the "Best sellers" section: if you click on the "icon heart" --> the product will be added to your wishlist (just once, because it will check if you already have this product in wishlist or not), and this data will be saved in localhost.
+
+
+ - In the "Best sellers" section: if you click on add to cart --> the product will be added to your cart. You can change the number of products you want to add. If you want to add the same product again, just the number of items will be changed.
+
+
+  **Shop page**
+
+
+- If you click on the "heart" --> the product will be added to wishlist (just once, because it will check if you already have this product in your wishlist or not), and this data will be saved in localhost.
+
+
+ - If you click on add to cart --> the product will be added to cart, You can change the number of products you want to add. If you want to add the same product again, just the number of items will be changed. The data will be saved on localhost.
+
+
+  **Search section**
+
+
+ - Search input --> once you put in search terms and click enter, an additional modal will be opened and show us all matched items (even one letter will be taken into account).
+
+
+
+ **Wish page**
+
+
+ - If you click on the "heart" --> the product will be deleted from your wishlist and localhost.
+
+
+ - If you click on add to cart --> the product will be added to your cart. You can change the number of products you want to add. If you want to add the same product again, just the number of items will be changed. The data will be saved on localhost.
+
+
+
+ **Log page**
+
+
+ - This shop has 2 private pages: MYLIST and CART. The user can add items from any page, BUT if he/she/they want to see them and modify --> he/she/they will be redirected to LOGIN/LOGOUT page. Once the user enters email (iuliia@gmail.com) and password (12345) he/she/they will get access to private pages. The data saved in localstorage
+
+
+ !Important! As this project does not have a real database, logging in is just a simple verification of these state variables. Keep that in mind. You can see the code better here --> **/src/components/Login/Log.jsx"
+
+
+- To log out, simply click the "LOGOUT" button in the header.This boton changes depend on whether the user is logged in or not.
+
+
+
+ **Cart page**
+
+
+- By clicking "Remove," the user can remove the product from the cart.
+- User can choose shipping and the total price will be changed.
+
+
+
+ **Product page**
+
+
+ - If you click on the button "Add to wishlist" --> the product will be deleted from wishlist and localhost
+
+
+ - If you click on add to cart --> the product will be added to your cart. You can change the number of products you want to add. If you want to add the same product again, just the number of items will be changed. The data will be saved on localhost
+
+
+ - You can open product detail page make click on produtc img from HOME page or SHOP page
+
+
+
+
+## Author
+
+
+[Iuliia Shikhanova](https://github.com/IuliiaNova)
