@@ -23,9 +23,10 @@ My main tasks were:
 
 1. **How to run the project:** Open a terminal -> npm start (! make sure that you are in the correct folder "online-shop")
 2. **How to run the json-server:** json-server --watch products.json
+3. After surfe the page in "logout" regime --> use these **email** (iuliia@gmail.com) and **password** (12345) to LOG IN and see private pages 
 
 
- ! Remember that you need to open two different terminals and get two servers, one for web and another for data.
+ !Remember that you need to open two different terminals and get two servers, one for web and another for data.
 
 
 ## Visualization
