@@ -4,7 +4,7 @@ import mcl from "../image/press/mcl.png";
 import tatler from "../image/press/tatler.png";
 import vogue from "../image/press/vogue.png";
 import whth from "../image/press/whth.png";
-import "./section.css";
+import "./Section.css";
 
 
 const Section = () => {

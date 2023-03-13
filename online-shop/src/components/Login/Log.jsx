@@ -33,7 +33,7 @@ const Log = () => {
 
   const onChangeEmail = (e) => {
     setEmail(e.target.value)
-  }
+  } 
 
   const onChangePassword = (e) => {
     setPassword(e.target.value)

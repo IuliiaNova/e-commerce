@@ -23,7 +23,7 @@ export const Search = () => {
     };
 
     fetchProducts();
-  }, []);
+  }, []); 
 
 
   const searchProducts = (e) => {

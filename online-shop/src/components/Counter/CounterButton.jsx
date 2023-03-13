@@ -61,7 +61,7 @@ const counterReducer = (state, action) => {
     default:
       return state;
   }
-};
+}; 
 
 export const Counter = ({ id, url, title, price, handleAddToCart }) => {
   const [count, dispatch] = useReducer(counterReducer, 1);

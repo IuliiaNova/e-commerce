@@ -37,7 +37,7 @@ const memoizedProducts = useMemo(() => {
         price={product.price} 
         count={product.count} 
       />
-    );
+    ); 
   });
 }, [products]);
 
