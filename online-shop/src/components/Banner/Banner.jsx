@@ -9,7 +9,6 @@ export const Banner = () => {
                         <Link to="/shop" className="nav-item mt-8"><button className="button-banner mt-8">KNOW MORE</button></Link>
                     </div>
         </section>
-
     )
 }
 

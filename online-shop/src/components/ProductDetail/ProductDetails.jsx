@@ -5,7 +5,6 @@ import products from "../../data/products.js";
 import CartContext from '../../context/Cart/CartContext';
 
 
-
 const ProductDetails = () => {
 
     const { count, handleAddToCart, addToWishlist }= useContext(CartContext)
@@ -14,7 +13,6 @@ const ProductDetails = () => {
     const {id, title, url, description, price} = products.find((product) => {
         return product.id === parseInt(idProduct)
       }) 
-
   
     return (
         <section class="text-gray-700 body-font overflow-hidden bg-white">

@@ -20,7 +20,6 @@ export const ProductsList = () => {
     fetchProducts();
   }, []);
 
-// Here we prevent unnecessary re-renders of the ProductItem components if the products state hasn't changed
 
 const memoizedProducts = useMemo(() => {
   if (!Array.isArray(products)) {

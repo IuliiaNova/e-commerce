@@ -3,8 +3,8 @@ import UserContext from "./UserContext";
 
 const UserProvider = ( {children} ) => {
     const [user, setUser] = useState({
-        name: "Lola",
-        age: 20
+        name: "Iuliia",
+        age: 29
     });
 
     return (

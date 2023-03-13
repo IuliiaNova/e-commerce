@@ -1,3 +1,5 @@
+// This code is a view of component with logic, thet then was divided 
+
 import React, { useEffect, useRef, useState } from "react";
 import { Header, Footer } from "../components";
 

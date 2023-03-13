@@ -1,5 +1,5 @@
 import React from "react"
-import { Header, Banner, Footer } from "../../components";
+import { Header, Footer } from "../../components";
 import WishList from "../../components/Whishes/WishList";
 import BannerTwo from "../../components/Banner/BannerTwo";
 
