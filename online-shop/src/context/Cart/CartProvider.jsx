@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import CartContext from "./CartContext";
+//import { toast } from 'react-toastify';
+//import 'react-toastify/dist/ReactToastify.css';
 
 const CartProvider = ({ children }) => {
-
-  // Below I will use context to create a global scope to cartItems and its function + useEffects
 
   const [cartItems, setItems] = useState([]);
 
@@ -18,13 +18,6 @@ const CartProvider = ({ children }) => {
 
 
   const handleAddToCart = (id, url, title, price, count) => {
-
-    /*const logged = localStorage.getItem('userLogin');
-    console.log(logged)
-
-    if (logged == null) {
-      alert("Please log in")
-    } else {}*/
 
       const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
       const itemIndex = cartItems.findIndex(item => item.id === id);
@@ -62,7 +55,18 @@ const CartProvider = ({ children }) => {
     if (itemIndex === -1) {
       setWishlist([...wishItems, item]);
     } else {
-      alert("You already have this product in your wishlist");
+      alert("You already have this product in your wishlist")
+
+      /*
+      toast("You already have this product in your wishlist", {
+        position: "top-cente",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      }); */
     }
   };
 

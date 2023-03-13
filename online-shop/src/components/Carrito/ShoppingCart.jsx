@@ -36,9 +36,9 @@ export const ShoppingCart = () => {
           </div>
           <div className="flex mt-10 mb-5">
             <h3 className="font-semibold text-gray-600 text-xs uppercase w-2/5">Product Details</h3>
-            <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Quantity</h3>
-            <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Price</h3>
-            <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Total</h3>
+            <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5">Quantity</h3>
+            <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5">Price</h3>
+            <h3 className="font-semibold text-center text-gray-600 text-xs uppercase w-1/5">Total</h3>
           </div>
 
           <div className="shopping-items">
@@ -79,7 +79,7 @@ export const ShoppingCart = () => {
             </select>
           </div>
           <div className="border-t mt-8">
-            <div className="flex  justify-between py-6 text-sm uppercase flex flex-row text-gray-600">
+            <div className="flex  justify-between py-6 text-sm uppercase flex-row text-gray-600">
               <span className="font-semibold">Total cost</span>
               <span className="">{totalCostForm}€</span>
             </div>
