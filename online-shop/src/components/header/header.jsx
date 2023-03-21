@@ -38,7 +38,7 @@ export const Header = () => {
         </div>
       )}
 
-        <div className="div-container-nav-links flex gap-14 hidden md:flex items-center w-80 ml-72 p-8">
+        <div className="div-container-nav-links flex gap-14 hidden md:flex items-center w-80 ml-16 p-8">
           
           <Link to="/" className="nav-item"> HOME </Link>
           <Link to="/shop" className="nav-item"> SHOP </Link>
